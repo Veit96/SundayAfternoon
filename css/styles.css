@@ -53,9 +53,8 @@ h1, h2, h3 {
     font-weight: 700;
     line-height: 1;
     text-align: center;
-    text-shadow: 0.06em 0.03em 0.12em var(--clr-dark);
 }
-h1 { font-size: 5rem; }
+h1 { font-size: 5rem; text-shadow: 0.06em 0.03em 0.12em var(--clr-dark); }
 h2 { font-size: 3rem; }
 h3 { font-size: 2rem; }
 @media only screen and (max-width: 768px) {
@@ -66,7 +65,7 @@ h3 { font-size: 2rem; }
 
 .container {
     margin-inline: auto;
-    width: min(90%, 120rem);
+    width: min(90%, 150rem);
 }
 .center {
     text-align: center;
@@ -119,7 +118,7 @@ section.banner {
     width: 100%;
     color: var(--clr-very-light);
     background-color: var(--clr-middle);
-}
+} 
 
 /* INFO */
 .columns {
@@ -129,6 +128,43 @@ section.banner {
 .info h2 {
     column-span: all;
 }
+
+
+/* CARD */
+.houses__flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4em;
+}
+.houses__flex > * {
+    flex: 1 1 25em;
+}
+.card {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: var(--clr-light);
+    padding: 2em;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    transition: box-shadow ease-in-out 250ms;
+}
+.card:hover {
+    box-shadow: 0 5px 40px -5px rgba(0,0,0,0.5);
+}
+.card__image {
+    width: 100%;
+    padding-top: 66.66%;
+    position: relative;
+    margin-bottom: 2em;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card__title {
+    text-align: left;
+}
+
 
 /* PRODUCT */
 .product {
