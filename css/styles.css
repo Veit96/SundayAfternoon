@@ -1,0 +1,152 @@
+/*
+font-family: 'Montserrat', sans-serif;
+300, 500
+font-family: 'Roboto Slab', serif;
+700
+*/
+
+/* CUSTOM PROPERTIES */
+:root {
+    --clr-dark: #2d2d25ff;
+    --clr-middle: #5b9279ff;
+    --clr-light: #a6c6b6ff;
+    --clr-very-light: #f1f9f3ff;
+    --ff-primary: 'Montserrat', sans-serif;
+    --ff-accent: 'Roboto Slab', serif;
+}
+
+/* RESET */
+html {
+    font-size: 62.5%;
+}
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+img {
+    display: block;
+    width: 100%;
+}
+
+/* GENERIC */
+body {
+    font-family: var(--ff-primary);
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--clr-dark);
+    background-color: var(--clr-very-light);
+}
+h1, h2, h3, p {
+    margin-bottom: 1.5em;
+}
+h1, h2, h3 {
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    text-shadow: 0.06em 0.03em 0.12em var(--clr-dark);
+}
+h1 { font-size: 5rem; }
+h2 { font-size: 3rem; }
+h3 { font-size: 2rem; }
+@media only screen and (max-width: 768px) {
+    h1 { font-size: 5rem; }
+    h2 { font-size: 3rem; }
+    h3 { font-size: 2rem; }
+}
+
+.container {
+    margin-inline: auto;
+    width: min(90%, 120rem);
+}
+.center {
+    text-align: center;
+    max-width: 70ch;
+}
+.strong {
+    font-weight: 500;
+}
+
+/* HEADER */
+header {
+    font-size: 2rem;
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+}
+.logo {
+    font-family: var(--ff-accent);
+    font-size: 2em;
+}
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav {
+    display: flex;
+    gap: 2.5em;
+}
+a {
+    font-size: 1em;
+    color: var(--clr-dark);
+}
+a:hover {
+    color: var(--clr-middle);
+}
+
+/* MAIN */
+main {
+    width: 100%;
+    font-size: 1.6rem;
+}
+section {
+    width: 100%;
+    padding-top: 10em;
+    padding-bottom: 10em;
+}
+
+/* BANNER */
+section.banner {
+    width: 100%;
+    color: var(--clr-very-light);
+    background-color: var(--clr-middle);
+}
+
+/* INFO */
+.columns {
+    columns: 2 40ch;
+    column-gap: 2em;
+}
+.info h2 {
+    column-span: all;
+}
+
+/* PRODUCT */
+.product {
+    background-color: var(--clr-light);
+}
+
+.product-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.split {
+    columns: 2 20em;
+}
+
+.product-item {
+    max-width: 30em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
